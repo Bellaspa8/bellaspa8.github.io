@@ -1,27 +1,198 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serenity | Salon & Spa</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        :root {
+            --primary-color: #d4a373; /* Tono arena/dorado */
+            --secondary-color: #faedcd; /* Crema */
+            --dark-color: #333;
+        }
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-color);
+        }
 
-    <!-- Optional JavaScript; choose one of the two! -->
+        h1, h2, h3, .navbar-brand {
+            font-family: 'Playfair Display', serif;
+        }
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
-  </body>
+        .btn-spa {
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+            padding: 10px 30px;
+            transition: 0.3s;
+        }
+
+        .btn-spa:hover {
+            background-color: #bc8a5f;
+            color: white;
+        }
+
+        /* Servicios */
+        .service-card {
+            border: none;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .icon-box {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #fefae0;
+            padding: 50px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fs-3" href="#">SERENITY</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#precios">Precios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-spa" href="https://wa.me/123456789">Reserva Ahora</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="inicio" class="hero text-center">
+        <div class="container">
+            <h1 class="display-2 fw-bold">Rejuvenece tu Cuerpo y Alma</h1>
+            <p class="lead mb-4">Experiencias de lujo diseñadas para tu bienestar total.</p>
+            <a href="#servicios" class="btn btn-spa btn-lg">Explorar Servicios</a>
+        </div>
+    </header>
+
+    <section id="servicios" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="display-5">Nuestros Servicios</h2>
+                <div class="mx-auto" style="width: 80px; height: 3px; background: var(--primary-color);"></div>
+            </div>
+            
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="card h-100 service-card p-4">
+                        <div class="icon-box"><i class="fas fa-spa"></i></div>
+                        <h3>Masajes Relax</h3>
+                        <p class="text-muted">Libera la tensión acumulada con nuestras técnicas de aromaterapia y piedras calientes.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 service-card p-4">
+                        <div class="icon-box"><i class="fas fa-cut"></i></div>
+                        <h3>Peluquería</h3>
+                        <p class="text-muted">Cortes, color y tratamientos capilares de vanguardia con productos orgánicos.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 service-card p-4">
+                        <div class="icon-box"><i class="fas fa-magic"></i></div>
+                        <h3>Faciales</h3>
+                        <p class="text-muted">Tratamientos rejuvenecedores adaptados a tu tipo de piel para un brillo natural.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="precios" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecee?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="img-fluid rounded shadow" alt="Spa Relax">
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <h2 class="mb-4 mt-4">Lista de Cuidados</h2>
+                    <div class="d-flex justify-content-between border-bottom py-2">
+                        <span>Masaje Sueco (60 min)</span>
+                        <span class="fw-bold text-success">$45.00</span>
+                    </div>
+                    <div class="d-flex justify-content-between border-bottom py-2">
+                        <span>Manicura y Pedicura</span>
+                        <span class="fw-bold text-success">$30.00</span>
+                    </div>
+                    <div class="d-flex justify-content-between border-bottom py-2">
+                        <span>Limpieza Facial Profunda</span>
+                        <span class="fw-bold text-success">$55.00</span>
+                    </div>
+                    <div class="d-flex justify-content-between border-bottom py-2">
+                        <span>Corte y Peinado Profesional</span>
+                        <span class="fw-bold text-success">$25.00</span>
+                    </div>
+                    <a href="#contacto" class="btn btn-outline-dark mt-4">Consultar otros precios</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <div class="container text-center">
+            <h2 class="mb-4">Visítanos</h2>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <i class="fas fa-map-marker-alt mb-2"></i>
+                    <p>Av. Siempre Viva 123, Ciudad Saludable</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <i class="fas fa-phone mb-2"></i>
+                    <p>+51 987 654 321</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <i class="fas fa-clock mb-2"></i>
+                    <p>Lun - Sáb: 9am - 8pm</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="social-links">
+                <a href="#" class="text-dark mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-dark mx-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-dark mx-2"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p class="mt-4 small">&copy; 2026 Serenity Salon & Spa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
